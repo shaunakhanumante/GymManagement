@@ -33,5 +33,11 @@ namespace GymManagement
             Track trackForm = new Track(); //creates form object
             trackForm.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Attendence aForm = new Attendence();
+            aForm.ShowDialog();
+        }
     }
 }

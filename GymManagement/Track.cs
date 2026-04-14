@@ -68,6 +68,12 @@ namespace GymManagement
                                             break;
                                     }
                                 }
+
+                                //Show log and progress button
+                                button2.Visible = true;
+                                button2.Enabled = true;
+                                button3.Visible = true;
+                                button3.Enabled = true;
                             }
 
                             else
@@ -89,5 +95,41 @@ namespace GymManagement
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+            if (listBox1.SelectedItem != null)
+            {
+
+                if (int.TryParse(textBox1.Text, out int memberID))
+                {
+                    string exercise = listBox1.SelectedItem.ToString();
+
+                    Log logForm = new Log(memberID, exercise);
+                    logForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid Member ID first.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select an exercise from the list to log.");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(textBox1.Text, out int id))
+            {
+                Progress progressTrack = new Progress(id);
+                progressTrack.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Please enter or search for a Member ID first!");
+            }
+        }
     }
 }
