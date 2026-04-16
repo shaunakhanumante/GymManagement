@@ -16,5 +16,25 @@ namespace GymManagement
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DateTime inDate;
+            if (!DateTime.TryParse(textBox1.Text, out inDate))
+            {
+                label5.Text = "Please enter valid date";
+                return;
+            }
+
+            DateTime inTime;
+            if (!DateTime.TryParse(textBox2.Text, out inTime))
+            {
+                label5.Text = "Please enter valid time";
+                return;
+            }
+
+            string connection = @"Data Source=(localdb)\ProjectModels;Initial Catalog=GymDB;Integrated Security=True";
+            string query = "Insert ....";
+        }
     }
 }
