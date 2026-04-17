@@ -96,9 +96,10 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label4.Location = new System.Drawing.Point(47, 212);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(169, 20);
+            this.label4.Size = new System.Drawing.Size(87, 20);
             this.label4.TabIndex = 5;
-            this.label4.Text = "FirstName LastName";
+            this.label4.Text = "MemberID";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // button1
             // 
