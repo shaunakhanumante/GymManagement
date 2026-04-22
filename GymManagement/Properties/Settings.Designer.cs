@@ -27,7 +27,7 @@ namespace GymManagement.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=GymDB;Integrated Security=True" +
-            ";Pooling=False;Encrypt=True;TrustServerCertificate=False")]
+            ";Pooling=False;Encrypt=False;TrustServerCertificate=False")]
         public string GymDBConnectionString {
             get {
                 return ((string)(this["GymDBConnectionString"]));
@@ -38,7 +38,7 @@ namespace GymManagement.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\ProjectModels;Initial Catalog=GymDB;Integrated Security=Tru" +
-            "e;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False")]
+            "e;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False")]
         public string GymDBConnectionString1 {
             get {
                 return ((string)(this["GymDBConnectionString1"]));
