@@ -1,26 +1,34 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GymManagement
 {
-    public partial class CheckIn : Form
+    public partial class CheckOut : Form
     {
-        public CheckIn()
+        public CheckOut()
         {
             InitializeComponent();
         }
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+            
+        //}
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             DateTime inDate;
             if (!DateTime.TryParse(textBox1.Text, out inDate))
@@ -74,7 +82,7 @@ namespace GymManagement
                         }
                     }
 
-                    string insertQuery = "INSERT INTO Attendance (MemberID, FirstName, LastName, Date) VALUES (@id, @fn, @ln, @dt)";
+                    string insertQuery = "INSERT INTO Out (MemberID, FirstName, LastName, Date) VALUES (@id, @fn, @ln, @dt)";
                     using (SqlCommand cmd = new SqlCommand(insertQuery, conn))
                     {
                         cmd.Parameters.AddWithValue("@id", mID);
@@ -94,13 +102,5 @@ namespace GymManagement
                 }
             }
         }
-
-
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

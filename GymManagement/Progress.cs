@@ -25,7 +25,7 @@ namespace GymManagement
 
         private void LoadMemberData()
         {
-            string connection = @"Data Source=(localdb)\ProjectModels;Initial Catalog=GymDB;Integrated Security=True";
+            string connection = @"Data Source=(localdb)\ProjectModels;Initial Catalog=GymDB;Integrated Security=True;Encrypt=False;";
             string query = "SELECT LogDate, ExerciseName, Sets, Reps, Weight FROM WorkoutLogs " +
                            "WHERE MemberID = @id ORDER BY LogDate DESC";
 
