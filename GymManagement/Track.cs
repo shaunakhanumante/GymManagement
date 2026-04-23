@@ -131,5 +131,10 @@ namespace GymManagement
                 MessageBox.Show("Please enter or search for a Member ID first!");
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,7 +30,7 @@ namespace GymManagement
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Track trackForm = new Track(); //creates form object
+            Track trackForm = new Track(); 
             trackForm.ShowDialog();
         }
 
@@ -38,6 +38,18 @@ namespace GymManagement
         {
             Attendence aForm = new Attendence();
             aForm.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Equipment eForm = new Equipment();
+            eForm.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Reports rForm = new Reports();
+            rForm.ShowDialog(); 
         }
     }
 }

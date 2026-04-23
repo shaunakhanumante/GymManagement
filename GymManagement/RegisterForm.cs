@@ -46,6 +46,7 @@ namespace GymManagement
             string lastName = textBox2.Text.Trim();
             string email = textBox3.Text.Trim();
             string phoneNumber = textBox4.Text.Trim();
+            string date = DateTime.Now.ToString("MM-dd-yyyy");
 
             //Loop to store workout plans in a list
             List<string> plans = new List<string>();
@@ -56,8 +57,8 @@ namespace GymManagement
             string selectedPlans = string.Join(",", plans);
 
             string connection = @"Data Source=(localdb)\ProjectModels;Initial Catalog=GymDB;Integrated Security=True";
-            string query = "INSERT INTO Members (FirstName, LastName, Email, PhoneNumber, WorkoutPlans) " +
-                   "VALUES (@fname, @lname, @email, @phone, @plans)";
+            string query = "INSERT INTO Members (FirstName, LastName, Email, PhoneNumber, DateJoin, WorkoutPlans) " +
+                   "VALUES (@fname, @lname, @email, @phone, @date, @plans)";
 
             using (SqlConnection conn = new SqlConnection(connection))
             {
@@ -68,6 +69,7 @@ namespace GymManagement
                     cmd.Parameters.AddWithValue("@lname", lastName);
                     cmd.Parameters.AddWithValue("@email", email);
                     cmd.Parameters.AddWithValue("@phone", phoneNumber);
+                    cmd.Parameters.AddWithValue("@date", date);
                     cmd.Parameters.AddWithValue("@plans", selectedPlans);
 
                     try
