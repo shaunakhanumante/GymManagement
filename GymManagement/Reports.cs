@@ -13,6 +13,11 @@ namespace GymManagement
 {
     public partial class Reports : Form
     {
+        private string NameForReport;
+        private string EmailForReport;
+        private string pNumForReport;
+        private string ExerciseForReport;
+        private string DateJoinForReport;
         public Reports()
         {
             InitializeComponent();
@@ -24,7 +29,7 @@ namespace GymManagement
             if (int.TryParse(textBox1.Text, out ID))
             {
                 string connection = @"Data Source=(localdb)\ProjectModels;Initial Catalog=GymDB;Integrated Security=True";
-                string query = "SELECT FirstName, LastName, Email, PhoneNumber, WorkoutPlans FROM Members WHERE MemberID = @ID";
+                string query = "SELECT FirstName, LastName, Email, PhoneNumber, DateJoin, WorkoutPlans FROM Members WHERE MemberID = @ID";
 
                 using (SqlConnection conn = new SqlConnection(connection))
                 {
@@ -39,12 +44,21 @@ namespace GymManagement
 
                             if (read.Read()) // Finds match
                             {
+                                //For Reports
+                                NameForReport = read["FirstName"].ToString() + " " + read["LastName"].ToString();
+                                EmailForReport = read["Email"].ToString();
+                                pNumForReport = read["PhoneNumber"].ToString();
+                                ExerciseForReport = read["WorkoutPlans"].ToString();
+                                DateJoinForReport = read["DateJoin"].ToString();
+
+
                                 // Display Information
                                 string firstName = read["FirstName"].ToString();
                                 string lastName = read["LastName"].ToString();
                                 string email = read["Email"].ToString();
                                 string number = read["PhoneNumber"].ToString();
                                 string Workout = read["WorkoutPlans"].ToString();
+                                string joinDate = read["DateJoin"].ToString();
                                 label2.ForeColor = Color.Blue;
                                 label2.Text = firstName + " " + lastName;
 
@@ -80,7 +94,8 @@ namespace GymManagement
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            MemberInfo memberInfo = new MemberInfo(NameForReport, EmailForReport, pNumForReport, ExerciseForReport, DateJoinForReport);
+            memberInfo.ShowDialog();
         }
     }
 }
