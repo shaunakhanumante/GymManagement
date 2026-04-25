@@ -65,8 +65,7 @@ namespace GymManagement
                                 //Enable buttons
                                 button2.Visible = true;
                                 button2.Enabled = true;
-                                button3.Visible = true;
-                                button3.Enabled = true;
+                               
                             }
                             else
                             {
@@ -75,8 +74,7 @@ namespace GymManagement
                                 //Disable buttons
                                 button2.Visible = false;
                                 button2.Enabled = false;
-                                button3.Visible = false;
-                                button3.Enabled = false;
+                                
                             }
                         }
                         catch (Exception ex)

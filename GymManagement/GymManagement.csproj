@@ -52,6 +52,12 @@
     <Compile Include="Attendence.Designer.cs">
       <DependentUpon>Attendence.cs</DependentUpon>
     </Compile>
+    <Compile Include="Availability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Availability.Designer.cs">
+      <DependentUpon>Availability.cs</DependentUpon>
+    </Compile>
     <Compile Include="CheckIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,7 @@
     <Compile Include="CheckOut.Designer.cs">
       <DependentUpon>CheckOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data.cs" />
     <Compile Include="Equipment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +99,12 @@
     </Compile>
     <Compile Include="Log.Designer.cs">
       <DependentUpon>Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintain.Designer.cs">
+      <DependentUpon>Maintain.cs</DependentUpon>
     </Compile>
     <Compile Include="MemberInfo.cs">
       <SubType>Form</SubType>
@@ -125,8 +138,17 @@
     <Compile Include="Track.Designer.cs">
       <DependentUpon>Track.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usage.Designer.cs">
+      <DependentUpon>Usage.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Attendence.resx">
       <DependentUpon>Attendence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Availability.resx">
+      <DependentUpon>Availability.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CheckIn.resx">
       <DependentUpon>CheckIn.cs</DependentUpon>
@@ -145,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Log.resx">
       <DependentUpon>Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintain.resx">
+      <DependentUpon>Maintain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberInfo.resx">
       <DependentUpon>MemberInfo.cs</DependentUpon>
@@ -169,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Track.resx">
       <DependentUpon>Track.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usage.resx">
+      <DependentUpon>Usage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="GymDBDataSet.xsc">
       <DependentUpon>GymDBDataSet.xsd</DependentUpon>
