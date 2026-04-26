@@ -19,42 +19,25 @@ namespace GymManagement
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Data.benchCount++;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            Data.squatCount ++;
         }
 
-        private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            if (e.NewValue == CheckState.Checked)
-            {
-                string selectedItem = checkedListBox1.Items[e.Index].ToString();
+            Data.treadCount++;
+        }
 
-                switch (selectedItem)
-                {
-                    case "Bench":
-                        Data.benchCount++;
-                        System.Diagnostics.Debug.WriteLine($"DEBUG: Bench count is now {Data.benchCount}");
-                        break;
-                    case "Squat Rack":
-                        Data.squatCount++;
-                        break;
-                    case "Treadmill":
-                        Data.treadCount++;
-                        break;
-                    case "Pull-Up Machine":
-                        Data.pullCount++;
-                        break;
-                    default:
-                        MessageBox.Show($"Error: {selectedItem}");
-                        break;
-                }
-            }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Data.pullCount++;
         }
     }
 }
